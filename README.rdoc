@@ -1,0 +1,42 @@
+Create puppy shop
+
+shop has many puppys
+
+puppy belongs to shop
+
+customer has many puppies
+puppy belongs to customer
+
+* puppy has a name, breed and age
+* shop has a name, location, puppies=[]
+* customer has a name, location, puppies=[]
+
+
+* customer can only buy puppies from shops with the same location (location matching)
+* when puppy is sold, it changes it's ownership - aka does not belong to shop, but belongs to customer
+* shop, customer -> users
+  * roles (0 -> shop, 1 -> customer)
+
+* puppy/user -> index/show/edit
+* customer buys a puppy
+  - puppy no longer belongs to shop
+
+================================================================================
+
+tests:
+  * model tests:
+    * user: if they have no puppies, user.puppies should return []
+            if they sell a puppy, they should have one less puppy
+    * puppy: should belong to a shop/customer
+            when a puppy is sold, change the owner
+
+  * feature tests:
+    * index page for a user should display all of their puppies
+      2ndary
+      * index page should have an 'edit' button for the puppies so they can change the name
+      * index page should have an 'edit' button for the puppies - But they cannot change the age or breed
+
+
+    * sell a puppy
+      * create a view (root) where all the puppies are displayed
+      * if the puppy does not belong to you (whatever the current user is) it has a "buy" button
