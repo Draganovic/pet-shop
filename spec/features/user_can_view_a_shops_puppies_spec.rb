@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "user can view a stores puppies" do
+RSpec.feature "user can view a specific shops puppies" do
   scenario "they visit shop page and see all puppies belonging to that shop" do
     shop1_name = "Pup Stop"
     shop2_name = "The Mill"
@@ -15,12 +15,13 @@ RSpec.feature "user can view a stores puppies" do
     puppy5 = Puppy.create(name: "Bob", breed: "Hound", age: 2, shop_id: shop1.id)
 
 
-    visit shops_path
+    visit shop_puppies_path(shop2)
 
-    click_on shop2_name
-  
-    expect(current_path).to eq shop_path(shop2)
+    expect(current_path).to eq shop_puppies_path(shop2)
     expect(page).to have_content shop2_name
-    expect(page).to have_link "View our Puppies"
+    expect(page).to have_content puppy2.name
+    expect(page).to have_content puppy4.name
+    expect(page).to_not have_content puppy1.name
+    expect(page).to_not have_content puppy3.name
   end
 end

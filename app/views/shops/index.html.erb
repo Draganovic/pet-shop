@@ -1,6 +1,6 @@
 <h1>All Pet Shops</h1>
 
 <% @shops.each do |shop| %>
-  <%= shop.name %>
-  <%= link_to "View Website", shop_path(shop)%>
+  <h2><%= shop.name %></h2>
+  <%= link_to shop.name, shop_path(shop)%>
 <% end %>

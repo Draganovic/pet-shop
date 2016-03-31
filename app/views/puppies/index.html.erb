@@ -1,0 +1,8 @@
+<h1> <%=@shop.name%> </h1>
+<% @puppies.each do |puppy| %>
+  <ul>
+  <li><%= puppy.name %></li>
+  <li><%= puppy.breed %></li>
+  <li><%= puppy.age %></li>
+  </ul>
+<% end %>
