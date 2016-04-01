@@ -40,3 +40,10 @@ tests:
     * sell a puppy
       * create a view (root) where all the puppies are displayed
       * if the puppy does not belong to you (whatever the current user is) it has a "buy" button
+
+      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+      0 shop owner shop_owner has shop id
+      puppies being sold - change of ownership (shop to customer)
+      add price to puppy (sales, ranges, (20% off certain breed) rank puppies(on index))
+
+      current shop owner(admin page)
