@@ -2,5 +2,8 @@
 
 <% @shops.each do |shop| %>
   <h2><%= shop.name %></h2>
-  <%= link_to shop.name, shop_path(shop)%>
+  <ul>
+  <li><%= "Average Puppy price $#{shop.average_price}" %></li>
+  <li><%= link_to shop.name, shop_path(shop)%></li>
+</ul>
 <% end %>
