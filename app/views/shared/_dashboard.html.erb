@@ -1,0 +1,8 @@
+<h1>Username: <%= current_user.user_name %></h1>
+<h2>User Puppies</h2>
+<ol><% current_user.puppies.each do |puppy| %>
+    <li><%= puppy.name %></li>
+<% end %></ol>
+
+      <li><%= link_to "Retun Main Site", root_path %></li>
+  

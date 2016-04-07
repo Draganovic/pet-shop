@@ -39,6 +39,7 @@ group :development, :test do
   gem 'capybara'
   gem 'pry-rails'
   gem 'launchy'
+  gem 'bcrypt'
 end
 
 group :development do

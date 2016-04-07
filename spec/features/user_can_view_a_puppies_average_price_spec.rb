@@ -15,8 +15,6 @@ RSpec.feature "user can view average puppy price" do
     puppy5 = Puppy.create(name: "Bob", breed: "Hound", age: 2, shop_id: shop1.id, price:2)
 
     visit shops_path
-    save_and_open_page
-    
 
     expect(page).to have_content "Average Puppy price $3"
     expect(page).to have_content "Average Puppy price $2"

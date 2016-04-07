@@ -1,5 +1,8 @@
 <h1>All Pet Shops</h1>
 
+<%= link_to "Login", login_path %>
+<%= link_to "Create Account", new_user_path %>
+
 <% @shops.each do |shop| %>
   <h2><%= shop.name %></h2>
   <ul>
